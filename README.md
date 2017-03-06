@@ -26,8 +26,9 @@ The `spYDyishai.py` file
 
 
   USER INPUT
-  - manual input          --mi
-  - from file             --fi
+  - run manual input      --mi
+  - run from file         --fi
+  - run form DB           --dbi
 
   SYSTEM OUTPUT
   - to screen             --os

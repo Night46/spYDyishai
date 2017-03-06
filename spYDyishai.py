@@ -117,8 +117,9 @@ class userInteraction(spYDyishai, userInput):
 		parser.add_argument('--sh', help='print out a short help', action='store_true', default=False)
 		parser.add_argument('--fh', help='print out the full extended help file', action='store_true', default=False)
 		parser.add_argument('--p', help='set the current session proxy settings', action='store_true', default=False)
-		parser.add_argument('--mi', help='manual input for new credentials', action='store_true', default=False)
-		parser.add_argument('--fi', help='read new credentials from file', action='store_true', default=False)
+		parser.add_argument('--mi', help='manual input for new credentials and run', action='store_true', default=False)
+		parser.add_argument('--fi', help='read new credentials from file and run', action='store_true', default=False)
+		parser.add_argument('--dbi', help='run again from resource in th DB', action='store_true', default=False)
 		parser.add_argument('--os', help='print the crwaler results only to screen', action='store_true', default=False)
 		parser.add_argument('--of', help='write the crawler results to a file', action='store_true', default=False)
 		parser.add_argument('--odb', help='write the crawler results to the DB', action='store_true', default=False)
@@ -144,9 +145,17 @@ class userInteraction(spYDyishai, userInput):
 
 		elif args.mi is True:
 			userInput.Credentials_Resorce(self)
+			# TODO
+			# add run function
 
 		elif args.fi is True:
 			userInput.Uresourcefile(self)
+			# TODO
+			# add run function
+
+		elif args.dbi is True:
+			# TODO
+			# add run function from DB
 
 		elif args.os is True:
 			# TODO
@@ -220,8 +229,9 @@ GENRAL
 
 
 USER INPUT
-* manual input          --mi
-* from file             --fi
+* run manual input      --mi
+* run from file         --fi
+* run from DB           --dbi
 
 SYSTEM OUTPUT
 * to screen             --os
