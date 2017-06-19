@@ -79,12 +79,7 @@ Please provide a set of username and password that are valid for Gmail login
 			resourceYN = raw_input().lower
 		if resourceYN() in ['y','Y', '']:
 			pass
-<<<<<<< HEAD
 		elif resourceYN() in ['n', 'N']:
-=======
-
-		elif resourceYN() == 'n':
->>>>>>> origin/master
 			userInput.Credentials_Resorce(self)
 		else:
 			print 'You broke me :/'
