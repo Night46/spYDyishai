@@ -79,7 +79,12 @@ Please provide a set of username and password that are valid for Gmail login
 			resourceYN = raw_input().lower
 		if resourceYN() in ['y','Y', '']:
 			pass
+<<<<<<< HEAD
 		elif resourceYN() in ['n', 'N']:
+=======
+
+		elif resourceYN() == 'n':
+>>>>>>> origin/master
 			userInput.Credentials_Resorce(self)
 		else:
 			print 'You broke me :/'
@@ -282,7 +287,7 @@ USER INPUT
 [**] user and password format >	username@domain.com:password
 
 [*] manual input        --mi     |   takes a google username and password as an initial input
-[*] from file           --fi     |   takes a list of google accounts from a ' ; ' seperated  file
+[*] from file           --fi     |   takes a list of google accounts from a ' ; ' separated file
 [*] from DB             --dbi    |   takes a list of google accounts from an existing spYDyishai DB
 
 OUTPUT
@@ -344,7 +349,7 @@ ___ ___  \/ ||  ||  |_|___ _  _
 __| |    || ||_// || | __| |  | | | ||
 '''
 		print '''
-spYDishai is a gmail spider like crawler that seeks google saved credential and allows pivoting from one account to another
+spYDishai is a gmail spider like crawler that seeks google saved credentials and allows pivoting from one account to another
 until the end of all times, just feed it with initial credentials and it will do the rest.
 
 spYDyisai will save and remember your links and credentials encrypted in a DB
@@ -399,7 +404,7 @@ Just follow the instructions to get started..
 			print ''
 			print '''
 [?] Would you like to list all the resources in you\'re DB? (N/tb/fd)
-Choose N - No, tb - Tables list, fd - Full data or leave black for default
+Choose N - No, tb - Tables list, fd - Full data or leave blank for default
 '''
 			listDB = raw_input().lower
 
@@ -430,13 +435,13 @@ Choose N - No, tb - Tables list, fd - Full data or leave black for default
 			print ''
 			# TODO
 			# dataManagement.manageDB.readSingleTableData(self)
-			print '[-] Please choose which value would you like to edit NONE, USERNAME or PASSWORD (NO/us/pa) or leave black for default'
+			print '[-] Please choose which value would you like to edit NONE, USERNAME or PASSWORD (NO/us/pa) or leave blank for default'
 			print ''
 			# TODO
 			# dataManagement.manageDB.editTableData(self)
 			userInteraction.guided_wellcome_options(self)
 		elif base_option() == '4':
-			print '[!!] MAKE SURE TO TAKE COUSION WITH THIS OPTION, NO COMEING BACK FROM HERE [!!]'
+			print '[!!] MAKE SURE TO TAKE CAUTION WITH THIS OPTION, NO COMEING BACK FROM HERE [!!]'
 			print ''
 			print '[-] Please select which resource you would like to delete'
 			# TODO
@@ -473,11 +478,11 @@ please choose "n", otherwise the default behaviour will be to reset the file con
 ######################################################################################
 ######################################################################################
 '''
-		print '[?] Would you like to cancle the content rest? (y/N)'
+		print '[?] Would you like to cancle the content reset? (y/N)'
 		content_resetYN = raw_input().lower
 
 		while content_resetYN() not in ['y', 'Y', 'n', 'N', '']:
-			print '[!] Please choose only "y", "n" or leave blacnk for default'
+			print '[!] Please choose only "y", "n" or leave blank for default'
 			content_resetYN = raw_input().lower
 		if content_resetYN() in ['n', 'N', '']:
 			userInteraction.credentialslist_reset(self)
@@ -491,7 +496,7 @@ please choose "n", otherwise the default behaviour will be to reset the file con
 		credentialslistYN = raw_input().lower
 
 		while credentialslistYN() not in ['y', 'Y', 'n', 'N', '']:
-			print '[!] Please choose only "y", "n" or leave blacnk for default'
+			print '[!] Please choose only "y", "n" or leave blank for default'
 			credentialslistYN = raw_input().lower
 		if credentialslistYN() in ['y', 'Y']:
 			print ''
@@ -499,7 +504,7 @@ please choose "n", otherwise the default behaviour will be to reset the file con
 			userInteraction.credentialslist_find(self)
 		else:
 			print ''
-			print '[-]Moveing forward with guided run.'
+			print '[-]Moving forward with guided run.'
 
 			userInteraction.credentialslist_clear(self)
 
@@ -543,7 +548,7 @@ please choose "n", otherwise the default behaviour will be to reset the file con
 			print '[!] spYDyisai could not find the credentialslist.ini file in it\'s default location'
 			print ''
 			print '[?] Would you like to provide the Full Path for the credentialslist.ini file'
-			print 'or would you perffere going back to the Guided Run? (FP/gr)'
+			print 'or would you prefer going back to the Guided Run? (FP/gr)'
 			fpgr = raw_input().lower
 
 			while fpgr() not in ['fp', 'FP', 'gr', 'GR', '']:
