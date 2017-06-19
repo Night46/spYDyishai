@@ -71,7 +71,7 @@ Please provide a set of username and password that are valid for Gmail login
 		else:
 			pass
 
-		print 'Is the spelling correct for: ' +resource_user+ 'with password: '+resource_pass+' (Y/n)'
+		print 'Is the spelling correct for: ' +resource_user+ ' with password: '+resource_pass+' (Y/n)'
 		resourceYN = raw_input().lower
 
 		while resourceYN() not in ['y', 'Y', 'n', 'N', '']:
@@ -79,13 +79,13 @@ Please provide a set of username and password that are valid for Gmail login
 			resourceYN = raw_input().lower
 		if resourceYN() in ['y','Y', '']:
 			pass
-		elif resourceYN() == 'n':
+		elif resourceYN() in ['n', 'N']:
 			userInput.Credentials_Resorce(self)
 		else:
 			print 'You broke me :/'
 			quit()
 
-		self.credentialslist_dictionary.update({"username":username, "password":password})
+		self.credentialslist_dictionary.update({"username":resource_user, "password":resource_pass})
 
 		for i in str(resource_number):
 			n = resource_number
@@ -156,6 +156,7 @@ class userInteraction(spYDyishai, userInput):
 		elif args.dbi is True:
 			# TODO
 			# add run function from DB
+			pass
 
 		elif args.os is True:
 			# TODO
@@ -201,6 +202,24 @@ class userInteraction(spYDyishai, userInput):
 			# TODO
 			# call delete all file
 			pass
+
+	def helpFile(self):
+			print '~! spYDyisai helpfile !~'.center(75)
+			print '''
+	For spYDyisai to work properly you'll need to supply some basic data:
+
+	[*] - credentils 	-	Are the username and password sets that the crawler will use to find additional credentials.
+
+	[*] - # of resources	-	If you wnat to provide multiple resources just let spYDyisai know how may are you going to provide
+
+	[*] - credentialslist 	-	If you prefere you can provide all the configuration needed in a condig file which is
+					super self explenatory instead useing the guided run.
+					just edit credentialslist.ini
+
+					If you choose to use the credentialslist.ini file to supply spYDyisai input, keep in mind that
+					!!! after each tun the config file resets to it's default !!! in order to prevent credentials beeing
+					saved in clear text.
+	'''
 
 	def short_help(self):
 		print ''
@@ -342,7 +361,7 @@ Just follow the instructions to get started..
 
 		if pHelp() in ['y', 'Y', '']:
 			userInteraction.helpFile(self)
-		elif pHelp() == 'n':
+		elif pHelp() in ['n', 'N']:
 			userInteraction.guided_wellcome_options(self)
 		else:
 			print 'You broke me :/'
