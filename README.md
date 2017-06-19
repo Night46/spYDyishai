@@ -51,6 +51,6 @@ The `dataManagement.py` file
 ---
   * `python dataManagement.py` :: | **never actually needs to run on it's own, it includes all the DB management functionality**
 
-The `resource.ini` file
+The `credentialslist.ini` file
 ---
   * `NO RUN FUNC` :: | **never actually needs to run on it's own, it includes all the credentials resources if you choose to work with a resource file**
